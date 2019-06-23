@@ -1,0 +1,29 @@
+
+<ul class="nav nav-tabs ">
+  <li class="nav-item">
+    <a class="nav-link active" href="/">Brand</a>
+  </li>
+  <li class="nav-item ">
+    <a class="nav-link" href="/shopping-cart/"> 
+      <i class="fas fa-shopping-cart"></i>shopping card
+      <span class="badge badge-pill badge-info">{{session.cart.totalQty}}</span>
+    </a>
+  </li>
+    <li class="nav-item dropdown ">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       <i class="fas fa-user"></i>user management</a>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          {{# if login }}
+              <a class="dropdown-item" href="/user/profile">User Account</a>
+              <a class="dropdown-item" href="/user/logout">Logout</a>
+          {{ else }}
+              <a class="dropdown-item" href="/user/signup">Sign up</a>
+              <a class="dropdown-item" href="/user/signin">Sign in</a>
+          {{/if}}
+        </div>
+      </li>
+  {{!-- <li class="nav-item">
+    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+  </li> --}}
+</ul>
